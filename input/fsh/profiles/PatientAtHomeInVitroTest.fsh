@@ -12,4 +12,5 @@ Description: "This Patient profile represents an At-Home In-Vitro Test Patient."
 * address.district MS
 * address.district ^short = "County"
 * birthDate 1..1
+* address.postalCode 1..1 
 
