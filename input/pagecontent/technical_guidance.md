@@ -23,3 +23,8 @@ Please see [Extended Operations on the RESTful API](http://hl7.org/fhir/R4/opera
 
 ### FHIR Bundle Resource
 Given that the COVID-19 At-Home In-Vitro Test Report use case consists of a single test or series of tests, independently run by a patient, and is resulted from a "Lateral Flow Assay" device and then collected and/or sent by an App, there is no database (e.g. EHR database) from which referenced resources can be queried and returned.  As such, any resource representing the lab result itself, "ask at order" (AOE) answers, etc. will need to be packaged together into a Bundle resource. As outlined in the Scope and Usage section of the [Resource Bundle](https://www.hl7.org/fhir/bundle.html), the primary “bundling” function for this use case is “Sending a set of resources as part of a message exchange".
+
+### Using OIDs as Organization Identifiers
+Per [FHIR data type Identifier](https://hl7.org/fhir/R4/datatypes.html#identifier): 
+> If the identifier value itself is naturally a globally unique URI (e.g. an OID, a UUID, or a URI with no trailing local part), then the `system` SHALL be "`urn:ietf:rfc:3986`", and the URI is in the `value` (OIDs and UUIDs using urn:oid: and urn:uuid: - see [note on the V3 mapping](https://hl7.org/fhir/R4/datatypes-mappings.html#ii) and the [examples](https://hl7.org/fhir/R4/datatypes-examples.html#Identifier)). Naturally globally unique identifiers are those for which no [system has been assigned](https://hl7.org/fhir/R4/identifier-registry.html) and where the value of the identifier is reasonably expected to not be re-used. Typically, these are absolute URIs of some kind.
+
